@@ -3,11 +3,11 @@ import React from 'react'
 import SearchBar from './SearchBar'
 import ContinentFilter from './ContinentFilter'
 
-const Form = () => {
+const Form = ({ searchCountry, setSearchCountry, setFilterContinent }) => {
     return (
         <form action = '' method = '' className = 'flex'>
-            <SearchBar />
-            <ContinentFilter />
+            <SearchBar setSearchCountry = {setSearchCountry} setFilterContinent = {setFilterContinent} />
+            <ContinentFilter setFilterContinent = {setFilterContinent} setSearchCountry = {setSearchCountry} />
         </form>
     )
 }

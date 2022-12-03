@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import CountryDetail from './CountryDetail'
 
-const Card = ({country}) => {
+const Card = ({ country }) => {
     const findCapital = () => {
         if (!Object.keys(country).includes('capital')) return
         

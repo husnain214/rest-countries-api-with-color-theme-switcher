@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({ setSearchCountry, setFilterContinent }) => {
     return (
         <div className ='search-bar elements-bg flex'>
             <svg 
@@ -28,6 +28,11 @@ const SearchBar = () => {
                 className = 'fs-300 elements-bg fw-400 text-color-strong'
                 placeholder = 'Search for a country...'
                 aria-label = 'country search bar'
+                onChange = {e => {
+                    setSearchCountry(e.target.value)
+                    setFilterContinent('')
+                }
+                }
             />
         </div>
     )

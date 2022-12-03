@@ -1,6 +1,10 @@
 import React from 'react'
 
-const ContinentFilter = () => {
+import Continent from './Continent'
+
+const ContinentFilter = ({ setFilterContinent }) => {
+    const continents = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+
     return (
         <div className = 'continent-filter'>
             <div 
@@ -30,17 +34,21 @@ const ContinentFilter = () => {
                 <input 
                     type = 'checkbox' 
                     name = 'dropdown-click-event' 
+                    id = 'dropdown-click-event'
                     className = 'dropdown-click-event'
-                    onBlur = {e => e.target.checked = false}
+                    // onBlur = {e => e.target.checked = false}
                 />
             </div>
 
             <ul className = 'dropdown-menu elements-bg'>
-                <li className = 'fs-300 text-color-strong fw-400'>Africa</li>
-                <li className = 'fs-300 text-color-strong fw-400'>America</li>
-                <li className = 'fs-300 text-color-strong fw-400'>Asia</li>
-                <li className = 'fs-300 text-color-strong fw-400'>Europe</li>
-                <li className = 'fs-300 text-color-strong fw-400'>Europe</li>
+                {
+                    continents.map(continent => 
+                        <Continent 
+                            continentName = {continent} 
+                            setFilterContinent = {setFilterContinent} 
+                            key = {continent}
+                        />)
+                }
             </ul>
         </div>
     )

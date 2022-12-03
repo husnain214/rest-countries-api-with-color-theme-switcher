@@ -245,7 +245,7 @@ form.flex {
   opacity: 0;
 }
 
-.continent-filter:has(.dropdown-click-event:not(:checked, :focus)) .dropdown-menu { display: none; }
+/* .continent-filter:has(.dropdown-click-event:not(:checked, :focus)) .dropdown-menu { display: none; } */
 .continent-filter:has(.dropdown-click-event:checked) .dropdown-menu { display: block; }
 
 .dropdown-menu { 
@@ -263,6 +263,7 @@ form.flex {
 
 .dropdown-menu li { 
   transition: all 100ms;
+  cursor: pointer;
   padding: .7em 1em; 
 }
 .dropdown-menu li:hover { 

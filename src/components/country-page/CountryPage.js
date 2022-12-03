@@ -7,6 +7,10 @@ import CountryDetail from '../homepage/CountryDetail'
 const CountryPage = () => {
     const { country } = useLocation().state
 
+    // Because the names of these keys are different for each entry
+    const currencyKey = Object.keys(country.currencies)[0]
+    const nameKey = Object.keys(country.name.nativeName)[0]
+
     console.log(country)
 
     const findCapital = () => {
@@ -31,14 +35,14 @@ const CountryPage = () => {
                     <h2 className = 'fs-600 fw-600 text-color-strong'>{country.name.common}</h2>
 
                     <div className='details grid'>
-                        <CountryDetail title = "Native Name" value = {""} />
+                        <CountryDetail title = "Native Name" value = {country.name.nativeName[nameKey].official} />
                         <CountryDetail title = "Population" value = {country.population.toLocaleString()} />
                         <CountryDetail title = "Region" value = {country.region} />
                         <CountryDetail title = "Sub Region" value = {country.subregion} />
                         {findCapital()}
                         <CountryDetail title = "Top Level Domain" value = {country.tld[0]} />
-                        {/* <CountryDetail title = "Currencies" value = {country.currencies.MRU.name} /> */}
-                        <CountryDetail title = "Languages" value = {country.languages.ara} />                     
+                        <CountryDetail title = "Currencies" value = {country.currencies[currencyKey].name} />
+                        <CountryDetail title = "Languages" value = {Object.values(country.languages).join(", ")} />                     
                     </div>
                 </div>
             </section>

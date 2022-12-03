@@ -11,7 +11,6 @@ import CountryPage from './components/country-page/CountryPage'
 
 const App = () => {
     const [countries, setCountries] = useState([]) 
-    const [searchCountry, setSearchCountry] = useState('')
 
     const countriesApiCall = async () => {
         console.log('effect')
