@@ -8,7 +8,7 @@ const CardGallery = ({ countries, searchCountry, filterContinent, }) => {
             return (
                 countries.map(country => {
                     if(country.continents[0].includes(filterContinent))
-                    return <Card country = {country} key = {country.name.common} />
+                    return <Card country = {country} countries = {countries} key = {country.name.common} />
                 })
             )
         }
@@ -17,13 +17,13 @@ const CardGallery = ({ countries, searchCountry, filterContinent, }) => {
             return (
                 countries.map(country => {
                     if(country.name.common.toLowerCase().includes(searchCountry))
-                        return <Card country = {country} key = {country.name.common} />
+                        return <Card country = {country} countries = {countries} key = {country.name.common} />
                 })
             )
         }
         else {
             return (
-                countries.map(country => <Card country = {country} key = {country.name.common} />)
+                countries.map(country => <Card country = {country} countries = {countries} key = {country.name.common} />)
             )
         }
     }

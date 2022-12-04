@@ -3,20 +3,32 @@ import { useLocation } from 'react-router-dom'
 
 import BackBtn from './BackBtn'
 import CountryDetail from '../homepage/CountryDetail'
+import BorderCountriesList from './BorderCountriesList'
 
 const CountryPage = () => {
-    const { country } = useLocation().state
+    const { country, countries } = useLocation().state
 
-    // Because the names of these keys are different for each entry
     const currencyKey = Object.keys(country.currencies)[0]
     const nameKey = Object.keys(country.name.nativeName)[0]
-
-    console.log(country)
 
     const findCapital = () => {
         if (!Object.keys(country).includes('capital')) return
         
-        return <CountryDetail title = {"Capital"} value = {country.capital[0]} />
+        return country.capital[0]
+    }
+
+    const countryData = {
+        "Native Name": country.name.nativeName[nameKey].official,
+        "Population": country.population.toLocaleString(),
+        "Region": country.region,
+        "Sub Region": country.subregion,
+        "Capital": findCapital(),
+        "Top Level Domain": Object.keys(country)
+                                  .find(key => key === "tld") === undefined 
+                                  ? "Not found" 
+                                  : country.tld[0],
+        "Currencies": country.currencies[currencyKey].name,
+        "Languages": Object.values(country.languages).join(", ")
     }
 
     return (
@@ -35,15 +47,13 @@ const CountryPage = () => {
                     <h2 className = 'fs-600 fw-600 text-color-strong'>{country.name.common}</h2>
 
                     <div className='details grid'>
-                        <CountryDetail title = "Native Name" value = {country.name.nativeName[nameKey].official} />
-                        <CountryDetail title = "Population" value = {country.population.toLocaleString()} />
-                        <CountryDetail title = "Region" value = {country.region} />
-                        <CountryDetail title = "Sub Region" value = {country.subregion} />
-                        {findCapital()}
-                        <CountryDetail title = "Top Level Domain" value = {country.tld[0]} />
-                        <CountryDetail title = "Currencies" value = {country.currencies[currencyKey].name} />
-                        <CountryDetail title = "Languages" value = {Object.values(country.languages).join(", ")} />                     
+                        {
+                            Object.keys(countryData)
+                            .map(countryKey => <CountryDetail title = {countryKey} value = {countryData[countryKey]} />)
+                        }                     
                     </div>
+
+                    <BorderCountriesList country = {country} countries = {countries} />
                 </div>
             </section>
         </main>

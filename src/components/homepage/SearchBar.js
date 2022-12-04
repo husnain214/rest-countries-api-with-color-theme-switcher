@@ -29,9 +29,9 @@ const SearchBar = ({ setSearchCountry, setFilterContinent }) => {
                 placeholder = 'Search for a country...'
                 aria-label = 'country search bar'
                 onChange = {e => {
-                    setSearchCountry(e.target.value)
-                    setFilterContinent('')
-                }
+                        setSearchCountry(e.target.value)
+                        setFilterContinent('')
+                    }
                 }
             />
         </div>

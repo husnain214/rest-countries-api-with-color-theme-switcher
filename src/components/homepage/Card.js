@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import CountryDetail from './CountryDetail'
 
-const Card = ({ country }) => {
+const Card = ({ country, countries }) => {
     const findCapital = () => {
         if (!Object.keys(country).includes('capital')) return
         
@@ -11,7 +11,7 @@ const Card = ({ country }) => {
     }
 
     return (
-        <Link to = {`/${country.name.common}`} state = {{country}}>
+        <Link to = {`/${country.name.common}`} state = {{ country, countries }}>
             <article className = 'grid elements-bg'>
                 <div className = 'card-img'>
                     <img 

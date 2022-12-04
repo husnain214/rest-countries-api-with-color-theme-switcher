@@ -36,7 +36,6 @@ const ContinentFilter = ({ setFilterContinent }) => {
                     name = 'dropdown-click-event' 
                     id = 'dropdown-click-event'
                     className = 'dropdown-click-event'
-                    // onBlur = {e => e.target.checked = false}
                 />
             </div>
 
