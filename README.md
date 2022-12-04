@@ -96,10 +96,6 @@ I also had to learn React Router for this project and how to pass data from one 
 <Link to = {`/${country.name.common}`} state = {{ country, countries }}>
 ```
 
-### Continued development
-
-I would like the dropdown menu to close if the user clicks on the body with the least amount of code possible.
-
 ### Useful resources
 
 - https://scrimba.com/learn/spacetravel - I learnt to make my own mini css framework specialized towards a single project. Learning utility classes was extremely helpful.
