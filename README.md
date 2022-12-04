@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://gleaming-souffle-708edc.netlify.app/]
+- Solution URL: https://www.frontendmentor.io/solutions/rest-countries-api-with-react-axios-html-css-custom-properties--Y2IK0KSPB
+- Live Site URL: https://gleaming-souffle-708edc.netlify.app/
 
 ## My process
 
@@ -102,12 +102,12 @@ I would like the dropdown menu to close if the user clicks on the body with the 
 
 ### Useful resources
 
-- [https://scrimba.com/learn/spacetravel] - I learnt to make my own mini css framework specialized towards a single project. Learning utility classes was extremely helpful.
-- [https://www.youtube.com/watch?v=Ul3y1LXxzdU] - Kyle is amazing at explaining React Router in this video.
+- https://scrimba.com/learn/spacetravel - I learnt to make my own mini css framework specialized towards a single project. Learning utility classes was extremely helpful.
+- https://www.youtube.com/watch?v=Ul3y1LXxzdU - Kyle is amazing at explaining React Router in this video.
 
 ## Author
 
-- Website - [https://fantastic-khapse-2cca16.netlify.app/]
-- Frontend Mentor - [https://www.frontendmentor.io/profile/husnain214]
+- Website - https://fantastic-khapse-2cca16.netlify.app/
+- Frontend Mentor - https://www.frontendmentor.io/profile/husnain214
 
 
