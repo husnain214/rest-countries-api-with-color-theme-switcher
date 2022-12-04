@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
 /* ------------------- */
 /* Custom properties   */
 /* ------------------- */
@@ -345,6 +347,7 @@ aside.flag {
 .border-countries-list.flex { 
   --gap: .5rem; 
   flex-wrap: wrap;
+  margin-bottom: 2em;
 }
 
 .border-countries-list li { 
