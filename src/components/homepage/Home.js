@@ -11,17 +11,13 @@ const Home = ({countries}) => {
     return (
         <main className = 'container'>
             <Form 
-                searchCountry = {searchCountry} 
                 setSearchCountry = {setSearchCountry} 
-                filterContinent = {filterContinent}
                 setFilterContinent = {setFilterContinent}
             />
             <CardGallery 
                 countries = {countries} 
                 searchCountry = {searchCountry} 
                 filterContinent = {filterContinent}
-                setFilterContinent = {setFilterContinent}
-                setSearchCountry = {setSearchCountry} 
             />
         </main>
     )
