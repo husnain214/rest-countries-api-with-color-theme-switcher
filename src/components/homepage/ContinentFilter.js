@@ -6,7 +6,7 @@ const ContinentFilter = ({ setFilterContinent }) => {
     const continents = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
 
     return (
-        <div className = 'continent-filter'>
+        <button type = 'button' className = 'continent-filter'>
             <div 
                 className='menu-title elements-bg flex' 
                 aria-label = 'clickable-dropdown-menu'
@@ -30,13 +30,6 @@ const ContinentFilter = ({ setFilterContinent }) => {
                         d = 'M19.5 8.25l-7.5 7.5-7.5-7.5' 
                     />
                 </svg>
-
-                <input 
-                    type = 'checkbox' 
-                    name = 'dropdown-click-event' 
-                    id = 'dropdown-click-event'
-                    className = 'dropdown-click-event'
-                />
             </div>
 
             <ul className = 'dropdown-menu elements-bg'>
@@ -49,7 +42,7 @@ const ContinentFilter = ({ setFilterContinent }) => {
                         />)
                 }
             </ul>
-        </div>
+        </button>
     )
 }
 

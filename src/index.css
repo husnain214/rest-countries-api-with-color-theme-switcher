@@ -247,7 +247,7 @@ form.flex {
   opacity: 0;
 }
 
-.continent-filter:has(.dropdown-click-event:checked) .dropdown-menu { display: block; }
+.continent-filter:focus-within .dropdown-menu { display: block; }
 
 .dropdown-menu { 
   padding: .8em 0;
@@ -265,6 +265,7 @@ form.flex {
 .dropdown-menu li { 
   transition: all 100ms;
   cursor: pointer;
+  text-align: left;
   padding: .7em 1em; 
 }
 .dropdown-menu li:hover { 
