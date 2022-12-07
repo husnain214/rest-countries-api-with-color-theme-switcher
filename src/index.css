@@ -249,10 +249,7 @@ form.flex {
   transition: all 300ms;
 }
 
-.continent-filter { 
-  border-radius: 5px; 
-  overflow: hidden;
-}
+.continent-filter, .menu-title { border-radius: 5px; }
 
 .continent-filter:focus-within .dropdown-menu { 
   visibility: visible; 
