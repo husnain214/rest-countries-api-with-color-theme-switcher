@@ -6,10 +6,10 @@ const ContinentFilter = ({ setFilterContinent }) => {
     const continents = ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
 
     return (
-        <button type = 'button' className = 'continent-filter'>
-            <div 
+        <div className = 'continent-filter'>
+            <button 
                 className='menu-title elements-bg flex' 
-                aria-label = 'clickable-dropdown-menu'
+                type = 'button'
             >
                 <p className = 'fs-300 text-color-strong fw-400' data-type = 'showMenu'>Filter by Region</p>
 
@@ -30,9 +30,9 @@ const ContinentFilter = ({ setFilterContinent }) => {
                         d = 'M19.5 8.25l-7.5 7.5-7.5-7.5' 
                     />
                 </svg>
-            </div>
+            </button>
 
-            <ul className = 'dropdown-menu elements-bg'>
+            <ul className = 'dropdown-menu elements-bg' role = 'listbox'>
                 {
                     continents.map(continent => 
                         <Continent 
@@ -42,7 +42,7 @@ const ContinentFilter = ({ setFilterContinent }) => {
                         />)
                 }
             </ul>
-        </button>
+        </div>
     )
 }
 

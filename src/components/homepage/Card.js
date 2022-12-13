@@ -16,7 +16,7 @@ const Card = ({ country, countries }) => {
                 <div className = 'card-img'>
                     <img 
                         src = {country.flags.svg}
-                        alt = '' 
+                        alt = {`${country.name.common} flag`}
                     />
                 </div>
 
