@@ -15,21 +15,16 @@ const App = () => {
     const countriesApiCall = async () => {
         console.log('effect')
         
-        let apiResponse
-        
         try {
-            apiResponse = await axios
-            .get('https://restcountries.com/v3.1/all')
-            .then(response => {
-                console.log('promise fulfilled')
-                return response.data
-            })   
+            const response = await axios.get('https://restcountries.com/v3.1/all')
+            
+            console.log('promise fulfilled')
+            
+            setCountries(response.data)
         }
         catch {
             return <p>Could Not connect to API</p>
         }
-
-        setCountries(apiResponse)
     }
 
     useEffect( () => { countriesApiCall() }, [])

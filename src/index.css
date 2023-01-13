@@ -351,3 +351,42 @@ aside.flag {
   color: hsl( var(--clr-text) / .6 );
   border-radius: 3px;
 }
+
+.loading-animation-container {
+  min-height: 80vh;
+  place-content: center;
+}
+
+.loading-animation {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: relative;
+  background-color: hsl( var(--clr-text) );
+}
+
+.loading-animation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  translate: -50% -50%;
+  background-color: hsl( var(--clr-body-bg) );
+  height: 5rem;
+  width: 3rem;
+  animation: 3s infinite ease-in rotation forwards;
+}
+
+@keyframes rotation {
+  0% {
+    rotate: 0;
+  }
+  50% {
+    rotate: 360deg;
+  }
+  100% {
+    rotate: 0;
+  }
+}

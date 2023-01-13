@@ -8,6 +8,14 @@ const Home = ({countries}) => {
     const [searchCountry, setSearchCountry] = useState('')
     const [filterContinent, setFilterContinent] = useState('')
 
+    if(countries.length === 0) {
+        return (
+            <div className="loading-animation-container grid">
+                <div className="loading-animation"></div>
+            </div>
+        )
+    }
+
     return (
         <main className = 'container'>
             <Form 
